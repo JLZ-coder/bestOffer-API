@@ -70,6 +70,7 @@ cur.execute("insert into offers (user_id, product_id, price, site) values (%s, %
     (4, 2, 35.56, "https://www.amazon.com/"))
 
 # Query the database and obtain data as Python objects
+cur.execute("SELECT * FROM users WHERE id=%s", (1,))
 
 # Make the changes to the database persistent
 conn.commit()
